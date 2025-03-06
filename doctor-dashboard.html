@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - LifeStream</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LifeStream</h2>
+                <p>Doctor Dashboard</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Find Donors</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i> Blood Requests</a></li>
+                    <li><a href="#"><i class="fas fa-warehouse"></i> Blood Inventory</a></li>
+                    <li><a href="#"><i class="fas fa-user-injured"></i> Recipients</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                    <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="user-info">
+                    <span>Welcome, <strong id="doctor-name">Dr. Asif Iqbal</strong></span>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <h2>Doctor Dashboard</h2>
+                
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Total Blood Units</h3>
+                            <p id="total-blood-units">152</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Pending Requests</h3>
+                            <p id="pending-requests">8</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Registered Donors</h3>
+                            <p id="registered-donors">102</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-hospital-user"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Recipients</h3>
+                            <p id="registered-recipients">75</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Blood Inventory</h3>
+                        <button class="btn-secondary">Update Inventory</button>
+                    </div>
+                    
+                    <div class="inventory-status">
+                        <div class="blood-inventory">
+                            <div class="blood-group-item">
+                                <div class="blood-group">A+</div>
+                                <div class="blood-level" style="--level: 65%"></div>
+                                <div class="blood-quantity">32 units</div>
+                            </div>
+                            
+                            <div class="blood-group-item">
+                                <div class="blood-group">A-</div>
+                                <div class="blood-level" style="--level: 35%"></div>
+                                <div class="blood-quantity">17 units</div>
+                            </div>
+                            
+                            <div class="blood-group-item">
+                                <div class="blood-group">B+</div>
+                                <div class="blood-level" style="--level: 55%"></div>
+                                <div class="blood-quantity">28 units</div>
+                            </div>
+                            
+                            <div class="blood-group-item">
+                                <div class="blood-group">B-</div>
+                

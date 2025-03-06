@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient Dashboard - LifeStream</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LifeStream</h2>
+                <p>Recipient Dashboard</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> New Blood Request</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Request History</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                    <li><a href="#"><i class="fas fa-hospital"></i> Hospital Info</a></li>
+                    <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="user-info">
+                    <span>Welcome, <strong id="recipient-name">Bilal Ahmed</strong></span>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <h2>Recipient Dashboard</h2>
+                
+                <div class="alert-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="alert-content">
+                        <h4>Your blood request is being processed</h4>
+                        <p>We are looking for matching donors for your O+ blood type request. You will be notified when we find a match.</p>
+                    </div>
+                </div>
+                
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Blood Type</h3>
+                            <p id="recipient-blood-type">O+</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Hospital</h3>
+                            <p id="recipient-hospital">Shifa Hospital</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Doctor</h3>
+                            <p id="recipient-doctor">Dr. Asif Iqbal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Request Status</h3>
+                            <p id="request-status">Pending</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3>Current Blood Request</h3>
+                    <div class="request-details">
+                        <div class="request-card">
+                            <div class="request-header">
+                                <h4>Request #BR001</h4>
+                                <span class="status pending">Pending</span>
+                            </div>
+                            <div class="request-body">
+                                <div class="request-info">
+                                    <p><strong>Blood Type:</strong> O+</p>
+                                    <p><strong>Quantity:</strong> 2 units</p>
+                                    <p><strong>Request Date:</strong> 2024-02-20</p>
+                                    <p><strong>Hospital:</strong> Shifa Hospital</p>
+                                    <p><strong>Doctor:</strong> Dr. Asif Iqbal</p>
+                                </div>
+                                <div class="request-actions">
+                                    <button class="btn-secondary">Update Request</button>
+                                    <button class="btn-danger">Cancel Request</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3>Blood Compatibility Information</h3>
+                    <div class="compatibility-info">
+                        <div class="compatibility-text">
+                            <h4>As an O+ recipient, you can receive blood from:</h4>
+                            <ul>
+                                <li>O+ (Same type)</li>
+                                <li>O- (Universal donor)</li>
+                            </ul>
+                            <p>Your doctor will prioritize finding a donor with your exact blood type, but in emergency situations, O- blood may be used as it's compatible with all blood types.</p>
+                        </div>
+                        <div class="compatibility-chart">
+                            <img src="../images/blood-types.jpg" alt="Blood type compatibility chart" id="recipient-compatibility-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3>Previous Blood Requests</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Request ID</th>
+                                <th>Date</th>
+                                <th>Blood Type</th>
+                                <th>Quantity</th>
+                                <th>Hospital</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- This would be populated from database -->
+                            <tr>
+                                <td>#BR001</td>
+                                <td>2024-02-20</td>
+                                <td>O+</td>
+                                <td>2 units</td>
+                                <td>Shifa Hospital</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Placeholder - would be replaced with actual data from backend
+        document.getElementById('recipient-compatibility-img').src = "https://via.placeholder.com/400x200";
+    </script>
+</body>
+</html>

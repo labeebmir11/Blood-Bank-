@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - LifeStream Blood Bank</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>LifeStream</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="#" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="register-section">
+        <div class="container">
+            <h2>Register with LifeStream</h2>
+            <p class="section-desc">Please select your role to register with our platform</p>
+            
+            <div class="role-selection">
+                <div class="role-card" id="donor-role">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Donor</h3>
+                    <p>Register to donate blood and save lives</p>
+                </div>
+                <div class="role-card" id="recipient-role">
+                    <i class="fas fa-procedures"></i>
+                    <h3>Recipient</h3>
+                    <p>Register to request blood when needed</p>
+                </div>
+                <div class="role-card" id="doctor-role">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Doctor</h3>
+                    <p>Register to manage blood inventory and requests</p>
+                </div>
+            </div>
+            
+            <div class="registration-forms">
+                <!-- Donor Registration Form -->
+                <form id="donor-form" class="role-form hidden">
+                    <h3>Donor Registration</h3>
+                    
+                    <div class="form-group">
+                        <label for="donor-name">Full Name</label>
+                        <input type="text" id="donor-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donor-age">Age</label>
+                            <input type="number" id="donor-age" name="age" min="18" max="65" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donor-gender">Gender</label>
+                            <select id="donor-gender" name="gender" required>
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donor-blood-type">Blood Type</label>
+                            <select id="donor-blood-type" name="blood_type" required>
+                                <option value="">Select</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donor-last-donation">Last Donation Date</label>
+                            <input type="date" id="donor-last-donation" name="last_donation_date">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donor-contact">Contact Number</label>
+                        <input type="tel" id="donor-contact" name="contact_no" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donor-email">Email</label>
+                        <input type="email" id="donor-email" name="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donor-address">Address</label>
+                        <textarea id="donor-address" name="address" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donor-password">Password</label>
+                        <input type="password" id="donor-password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donor-confirm-password">Confirm Password</label>
+                        <input type="password" id="donor-confirm-password" name="confirm_password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Register as Donor</button>
+                    </div>
+                </form>
+                
+                <!-- Recipient Registration Form -->
+                <form id="recipient-form" class="role-form hidden">
+                    <h3>Recipient Registration</h3>
+                    
+                    <div class="form-group">
+                        <label for="recipient-name">Full Name</label>
+                        <input type="text" id="recipient-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="recipient-age">Age</label>
+                            <input type="number" id="recipient-age" name="age" min="0" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="recipient-gender">Gender</label>
+                            <select id="recipient-gender" name="gender" required>
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient-blood-type">Blood Type</label>
+                        <select id="recipient-blood-type" name="blood_type" required>
+                            <option value="">Select</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient-contact">Contact Number</label>
+                        <input type="tel" id="recipient-contact" name="contact_no" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient-hospital">Hospital</label>
+                        <select id="recipient-hospital" name="hospital_id" required>
+                            <option value="">Select</option>
+                            <!-- This will be populated from database -->
+                            <option value="1">Shifa Hospital</option>
+                            <option value="2">City Care Hospital</option>
+                            <option value="3">PIMS</option>
+                            <option value="4">Allied Hospital</option>
+                            <option value="5">CMH Rawalpindi</option>
+                            <option value="6">Jinnah Hospital</option>
+                            <option value="7">Indus Hospital</option>
+                            <option value="8">Bahawal Victoria</option>
+                            <option value="9">Lady Reading</option>
+                            <option value="10">Bolton Hospital</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient-password">Password</label>
+                        <input type="password" id="recipient-password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient-confirm-password">Confirm Password</label>
+                        <input type="password" id="recipient-confirm-password" name="confirm_password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Register as Recipient</button>
+                    </div>
+                </form>
+                
+                <!-- Doctor Registration Form -->
+                <form id="doctor-form" class="role-form hidden">
+                    <h3>Doctor Registration</h3>
+                    
+                    <div class="form-group">
+                        <label for="doctor-name">Full Name</label>
+                        <input type="text" id="doctor-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor-specialization">Specialization</label>
+                        <input type="text" id="doctor-specialization" name="specialization" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor-contact">Contact Number</label>
+                        <input type="tel" id="doctor-contact" name="contact_no" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor-email">Email</label>
+                        <input type="email" id="doctor-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor-hospital">Hospital</label>
+                        <select id="doctor-hospital" name="hospital_id" required>
+                            <option value="">Select</option>
+                            <!-- This will be populated from database -->
+                            <option value="1">Shifa Hospital</option>
+                            <option value="2">City Care Hospital</option>
+                            <option value="3">PIMS</option>
+                            <option value="4">Allied Hospital</option>
+                            <option value="5">CMH Rawalpindi</option>
+                            <option value="6">Jinnah Hospital</option>
+                            <option value="7">Indus Hospital</option>
+                            <option value="8">Bahawal Victoria</option>
+                            <option value="9">Lady Reading</option>
+                            <option value="10">Bolton Hospital</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor-password">Password</label>
+                        <input type="password" id="doctor-password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doctor-confirm-password">Confirm Password</label>
+                        <input type="password" id="doctor-confirm-password" name="confirm_password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Register as Doctor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>LifeStream</h2>
+                    <p>Blood Bank Management System</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@lifestream.com</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> University Campus, Lahore</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LifeStream Blood Bank Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/form-handler.js"></script>
+</body>
+</html>

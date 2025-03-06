@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard - LifeStream</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LifeStream</h2>
+                <p>Donor Dashboard</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Donation History</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Schedule Donation</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                    <li><a href="#"><i class="fas fa-hospital"></i> Find Hospitals</a></li>
+                    <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="user-info">
+                    <span>Welcome, <strong id="donor-name">Ali Khan</strong></span>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <h2>Donor Dashboard</h2>
+                
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Last Donation</h3>
+                            <p id="last-donation-date">January 10, 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Next Eligible Date</h3>
+                            <p id="next-eligible-date">April 10, 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Total Donations</h3>
+                            <p id="total-donations">5</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <h3>Lives Saved</h3>
+                            <p id="lives-saved">15</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3>Blood Donation Status</h3>
+                    <div class="donation-status">
+                        <div class="status-card">
+                            <h4>Your Blood Type</h4>
+                            <div class="blood-type">O+</div>
+                            <p>Your blood can help 4 blood types!</p>
+                        </div>
+                        
+                        <div class="compatibility-chart">
+                            <h4>Blood Type Compatibility</h4>
+                            <img src="../images/blood-types.jpg" alt="Blood type compatibility chart" id="compatibility-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3>Nearby Hospitals Needing Your Blood Type</h3>
+                    <div class="hospital-list">
+                        <div class="hospital-card">
+                            <div class="hospital-info">
+                                <h4>Shifa Hospital</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Main Road, Lahore</p>
+                                <p><i class="fas fa-phone"></i> 03001234567</p>
+                            </div>
+                            <div class="hospital-need">
+                                <span class="blood-type">O+</span>
+                                <p>Urgently needed</p>
+                                <button class="btn-secondary">Schedule</button>
+                            </div>
+                        </div>
+                        
+                        <div class="hospital-card">
+                            <div class="hospital-info">
+                                <h4>Jinnah Hospital</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Model Town, Lahore</p>
+                                <p><i class="fas fa-phone"></i> 03051234572</p>
+                            </div>
+                            <div class="hospital-need">
+                                <span class="blood-type">O+</span>
+                                <p>Low stock</p>
+                                <button class="btn-secondary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Placeholder - would be replaced with actual data from backend
+        document.getElementById('compatibility-img').src = "https://via.placeholder.com/400x200";
+    </script>
+</body>
+</html>
